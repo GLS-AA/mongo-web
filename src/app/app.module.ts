@@ -7,20 +7,18 @@ import { HomeComponent } from './pages/home/home.component';
 import { RtCommonComponent } from './pages/rt-common/rt-common.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    RtCommonComponent
-  ],
+  declarations: [AppComponent, HomeComponent, RtCommonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
