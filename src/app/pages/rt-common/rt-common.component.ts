@@ -8,6 +8,7 @@ import { Apollo, gql } from 'apollo-angular';
 })
 export class RtCommonComponent implements OnInit {
   rtcommon89: any[] = [];
+  visitid: string = 'I48-21-000034';
 
   constructor(private apollo: Apollo) {}
 
@@ -17,7 +18,7 @@ export class RtCommonComponent implements OnInit {
         variables: {
           filter: {
             orguid: '5b20f438d1202e29ce16f710',
-            visitid: 'I48-21-000034',
+            visitid: this.visitid,
           },
         },
         query: gql`
