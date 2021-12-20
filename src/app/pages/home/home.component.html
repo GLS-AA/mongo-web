@@ -1,2 +1,8 @@
 <p>home works!</p>
 <button (click)="openRtCom()">{{title}}</button>
+<table>
+    <tr *ngFor="let org of organisations">
+        <td>{{ org?.code }}</td>
+        <td>{{ org?.name }}</td>
+    </tr>
+</table>

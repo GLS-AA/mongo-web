@@ -1,1 +1,21 @@
 <p>rt-common works!</p>
+<table style="width: 100%;">
+    <tr>
+        <th>Visit ID</th>
+        <th>#bill</th>
+        <th>summary</th>
+        <th>bed #1</th>
+        <th>bedoccupancy</th>
+    </tr>
+    <tr *ngFor="let rt of rtcommon89">
+        <td>{{rt.visitid}}</td>
+        <td>{{rt.countbill}}</td>
+        <td>{{rt.sumbill | number}}</td>
+        <td>{{rt.bed1.bed.code}}</td>
+        <td>
+            <ul>
+                <li *ngFor="let occ of rt.bedoccupancy">{{occ.bed.description}}</li>
+            </ul>
+        </td>
+    </tr>
+</table>
